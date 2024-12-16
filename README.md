@@ -172,9 +172,8 @@ Send a GET request to http://localhost:8000/conversations
 
 4.  Get conversation history:
     $messages = Invoke-RestMethod -Method Get -Uri "http://localhost:8000/conversations/$conversationId/messages"
-    $messages | ForEach-Object {
-       Write-Host "$($_.role): $($\_.content)"
-    }
+    $messages | ForEach-Object { Write-Host "$($_.role): $($\_.content)"}
+      
 
 5.  Try complex math operations:
 
