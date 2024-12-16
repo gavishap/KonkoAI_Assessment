@@ -163,20 +163,20 @@ Send a GET request to http://localhost:8000/conversations
     Write-Host "Conversation ID: $conversationId"
 
 2.  Send a message and get response:
-    $body = @{
-    content = "What's 25 times 4?"
-    } | ConvertTo-Json
+    $body = @{content = "What's 25 times 4?"} | ConvertTo-Json
 
-    $response = Invoke-RestMethod -Method Post -Uri "http://localhost:8000/conversations/$conversationId/messages" -ContentType "application/json" -Body $body
+    
+    $response = Invoke-RestMethod -Method Post -Uri "http://localhost:8000/conversations/$conversationId/messages" -ContentType "application/json" -Body
+     $body
    Write-Host "Response: $($response.content)"
 
-3.  Get conversation history:
+4.  Get conversation history:
     $messages = Invoke-RestMethod -Method Get -Uri "http://localhost:8000/conversations/$conversationId/messages"
     $messages | ForEach-Object {
        Write-Host "$($_.role): $($\_.content)"
     }
 
-4.  Try complex math operations:
+5.  Try complex math operations:
 
     # Initial calculation
 
