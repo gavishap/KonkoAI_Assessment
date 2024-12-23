@@ -1,4 +1,4 @@
-# Konko AI Chat API
+# ConcurrentAI Chat Engine API
 
 A RESTful API that enables concurrent math-focused chat conversations with an AI agent. Built as a technical assessment, it demonstrates robust async handling, clean architecture, and engineering best practices. The API allows users to maintain multiple independent conversations, process real-time math calculations, and maintain conversation history - all powered by Google's Gemini LLM model.
 
